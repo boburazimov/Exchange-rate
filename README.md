@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description of app: Kалькулятор для вычисления курса валют
+
+### Возможности:
+
+#### Форма иметь возможность добавлять поле горизонтально и вертикально;
+#### Если горизонтально то добавляется только поля "To";
+#### Если вертикально то добавляется поля "From";
+#### Добавленные поля имеют функцию удаления;
+#### При перезагрузке страницы все данные поля сохраняются;
+#### Данные для вычисления берутся с внешнего источника (api);
+
+API для получений данных: https://exchangeratesapi.io/
+
 ## Available Scripts
 
 In the project directory, you can run:
