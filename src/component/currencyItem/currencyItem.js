@@ -23,10 +23,10 @@ const CurrencyItem = ({itemIndex = null, item: {currency, value}, onChangeValues
           <Col md={action === "to" ? 6 : 7}>
             <input
               readOnly={action !== "from"}
-              type="number"
+              // type="number"
               className="form-control border-0 fw-bold text-end bg-white shadow-none"
               id={rowIndex + itemIndex + action}
-              value={value}
+              value={value.toLocaleString("en-RU", { minimumFractionDigits: 2})}
               onChange={(e) => onChangeValues(rowIndex, itemIndex, action, currency, e.target.value)}
             />
           </Col>
