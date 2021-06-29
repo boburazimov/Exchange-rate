@@ -2,6 +2,7 @@ import './App.css';
 import {Row} from "reactstrap";
 import React, {useEffect, useState} from "react";
 import CurrencyRow from "./component/currencyRow";
+import {currencyAPI} from "./api/api";
 
 function App() {
 
@@ -21,16 +22,22 @@ function App() {
   useEffect(() => {
 
     console.log("Render: UseEffect")
-    // currencyAPI.getLatest()
-    //   .then(res => {
-    // res.status === 200 && setRates(res.data.rates)
-    //     })
-    setRates({
-      EUR: 1,
-      USD: 1.19361,
-      UZS: 12620.689967,
-      RUB: 86.191817
-    })
+    /**
+     * Внешний источник API --------------------
+     */
+    currencyAPI.getLatest()
+      .then(res => {
+    res.status === 200 && setRates(res.data.rates)
+        })
+    /**
+     * Маковые данные ---------------------------
+     */
+    // setRates({
+    //   EUR: 1,
+    //   USD: 1.19361,
+    //   UZS: 12620.689967,
+    //   RUB: 86.191817
+    // })
     localStorage.setItem('data', JSON.stringify(data));
   }, [data])
 

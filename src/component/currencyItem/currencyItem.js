@@ -43,4 +43,4 @@ const CurrencyItem = ({itemIndex = null, item: {currency, value}, onChangeValues
   )
 }
 
-export default CurrencyItem;
+export default React.memo(CurrencyItem);
