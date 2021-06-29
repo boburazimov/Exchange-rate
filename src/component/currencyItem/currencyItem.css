@@ -17,3 +17,9 @@ input[type=number] {
     display: block;
     max-width: 212px;
 }
+
+.sel-style {
+    width: 63px!important;
+    background-position: left 2.5rem center!important;
+    margin-right: 5px!important;
+}
